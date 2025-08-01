@@ -15,7 +15,7 @@
   --font-comic: "Comic Relief", system-ui;
   --font-playfair: "Playfair", serif;
   --font-libertinus: "Libertinus Serif", serif;
-  --color-card-bg: #f9f9f9;
+  --color-card-bg: #faf4f2a3;
 }
 
 .grediant-color {
@@ -28,7 +28,7 @@
 }
 
 .mx-screen {
-  max-width: 1223px;
+  max-width: 1200px;
 }
 .flex-center {
   @apply flex justify-center items-center;
@@ -39,4 +39,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

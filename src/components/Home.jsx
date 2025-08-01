@@ -1,211 +1,35 @@
 import React from "react";
+import { products } from "../assets/assets";
 import assets from "../assets/assets";
 import { IoLocationSharp } from "react-icons/io5";
 import Card from "./Card";
 import WineCard from "./WineCard";
+import Footer from "./Footer";
+import ProductCarousel from "./ProductCarousel";
 
-const Home = () => {
-  const products = [
-    {
-      img: assets.absolute_vodka,
-      name: "Absolute Vodka",
-      price: 1050,
-      rating: 4.5,
-      discount: "12%",
-    },
-    {
-      img: assets.antiquity_blue,
-      name: "Antiquity Blue",
-      price: 850,
-      rating: 4.2,
-      discount: "10%",
-    },
-    {
-      img: assets.bacardi,
-      name: "Bacardi",
-      price: 920,
-      rating: 4.3,
-      discount: "15%",
-    },
-    {
-      img: assets.budweiser,
-      name: "Budweiser",
-      price: 200,
-      rating: 4.1,
-      discount: "7%",
-    },
-    {
-      img: assets.chenin_blanc,
-      name: "Chenin Blanc",
-      price: 890,
-      rating: 4.3,
-      discount: "10%",
-    },
-    {
-      img: assets.corona,
-      name: "Corona",
-      price: 210,
-      rating: 4.2,
-      discount: "5%",
-    },
-    {
-      img: assets.fratelli,
-      name: "Fratelli",
-      price: 780,
-      rating: 4.0,
-      discount: "8%",
-    },
-    {
-      img: assets.havana,
-      name: "Havana",
-      price: 860,
-      rating: 4.1,
-      discount: "10%",
-    },
-    {
-      img: assets.imperial_blue,
-      name: "Imperial Blue",
-      price: 320,
-      rating: 3.9,
-      discount: "7%",
-    },
-    {
-      img: assets.jacob_creek,
-      name: "Jacob's Creek",
-      price: 1100,
-      rating: 4.4,
-      discount: "10%",
-    },
-    {
-      img: assets.jameson,
-      name: "Jameson",
-      price: 1950,
-      rating: 4.6,
-      discount: "12%",
-    },
-    {
-      img: assets.johnnie_walker,
-      name: "Johnnie Walker",
-      price: 2400,
-      rating: 4.7,
-      discount: "15%",
-    },
-    {
-      img: assets.kingfisher,
-      name: "Kingfisher",
-      price: 150,
-      rating: 4.0,
-      discount: "5%",
-    },
-    {
-      img: assets.la_reserve,
-      name: "La Reserve",
-      price: 990,
-      rating: 4.1,
-      discount: "9%",
-    },
-    {
-      img: assets.magic_moment,
-      name: "Magic Moments",
-      price: 640,
-      rating: 4.1,
-      discount: "10%",
-    },
-    {
-      img: assets.mcDowells,
-      name: "McDowell's",
-      price: 580,
-      rating: 3.8,
-      discount: "6%",
-    },
-    {
-      img: assets.oban,
-      name: "Oban",
-      price: 2600,
-      rating: 4.8,
-      discount: "18%",
-    },
-    {
-      img: assets.oldmonk,
-      name: "Old Monk",
-      price: 450,
-      rating: 4.5,
-      discount: "10%",
-    },
-    {
-      img: assets.pinot_noir,
-      name: "Pinot Noir",
-      price: 1350,
-      rating: 4.6,
-      discount: "11%",
-    },
-    {
-      img: assets.royal_stag,
-      name: "Royal Stag",
-      price: 390,
-      rating: 4.0,
-      discount: "9%",
-    },
-    {
-      img: assets.shiraz,
-      name: "Shiraz",
-      price: 890,
-      rating: 4.3,
-      discount: "10%",
-    },
-    {
-      img: assets.tuborg,
-      name: "Tuborg",
-      price: 180,
-      rating: 4.0,
-      discount: "5%",
-    },
-    {
-      img: assets.white_mischief,
-      name: "White Mischief",
-      price: 460,
-      rating: 4.0,
-      discount: "8%",
-    },
-    {
-      img: assets.white_wine,
-      name: "White Wine",
-      price: 990,
-      rating: 4.2,
-      discount: "10%",
-    },
-    {
-      img: assets.yellow_tail,
-      name: "Yellow Tail",
-      price: 930,
-      rating: 4.4,
-      discount: "11%",
-    },
-  ];
-
-  return (
-    <div>
-      <section className="heading">
-        <div className="main-img bg-[url('/hero.png')] bg-cover bg-center w-full h-screen flex-center mb-12">
-          <div className=" z-40 flex flex-col justify-center items-center gap-5 mb-12">
-            <h1 className="w-3xl text-center text-7xl font-playfair font-bold text-shadow">
-              Wine, Liquor, and Beer. Straight to your
-              <span className="text-orange-light"> Door</span>.
+const Home = () => (
+  <div>
+    {/* Hero Section */}
+    <section className="heading">
+      <div className="bg-[url('/hero.png')] bg-cover bg-center w-full sm:h-screen py-22 sm:py-4 flex items-center justify-center">
+        <div className="mx-screen mx-auto">
+          <div className="text-center px-4 sm:px-6 md:px-0 flex flex-col items-center gap-2 sm:gap-5">
+            <h1 className="w-full md:w-3/4 text-3xl sm:text-5xl md:text-7xl font-playfair font-extrabold text-shadow leading-snug">
+              Wine, Liquor, and Beer. Straight to your{" "}
+              <span className="text-orange-light">Door</span>.
             </h1>
-            <div className="location mt-6 bg-white rounded-full flex items-center gap-1 w-4/5 p-1.5">
-              <div className="icon px-3">
-                <IoLocationSharp size={22} className="text-orange-dark" />
-              </div>
+            <div className="mt-6 sm:bg-white rounded-full flex flex-col sm:flex-row items-center w-11/12 sm:w-4/5 max-w-xl gap-3 p-3 sm:p-1.5">
+              <IoLocationSharp className="text-orange-dark sm:px-2 text-4xl hidden sm:inline-block" />
               <input
                 type="text"
-                className="bg-white text-sm rounded-full text-gray-800 flex-1 py-2 outline-none"
                 placeholder="Enter delivery address to shop"
+                className="bg-white w-full text-sm rounded-full text-gray-800 flex-1 px-6 sm:px-2 py-3 sm:py-1 outline-none"
               />
-              <button className="grediant-color font-medium px-4 py-2 rounded-full text-white cursor-pointer">
+              <button className="grediant-color font-medium px-6 sm:px-4 py-2 rounded-full text-white">
                 Shop Now
               </button>
             </div>
-            <p className="note text-xs mb-8">
+            <p className="note text-xs sm:mt-4 pb-18">
               I'm 18+ year of age and agree to the{" "}
               <span className="text-orange-light underline font-medium cursor-pointer">
                 Terms and Conditions
@@ -213,55 +37,78 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </section>
-      <section className="best-explore container mx-auto mt-32 h-screen flex-center">
+      </div>
+    </section>
+
+    {/* Best Sellers */}
+    <section className="best-explore container mx-auto mt-16 sm:my-32 px-4">
+      <div className="flex flex-col sm:flex-row justify-between items-center mx-screen mx-auto">
+        <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-extrabold">
+          Best <span className="text-orange-light">Sellers</span>
+        </h2>
+        <button className="mt-4 sm:mt-0 px-6 sm:px-8 py-2 sm:py-3 rounded-full grediant-color text-white font-rubik text-sm sm:text-base">
+          Explore More
+        </button>
+      </div>
+      <div className="mx-screen mx-auto">
+        <ProductCarousel products={products} Card={Card} />
+      </div>
+    </section>
+
+    {/* Wines Section */}
+    <section className="wines bg-card-bg py-12 sm:py-16">
+      <div className="container mx-auto px-4 ">
         <div className="mx-screen mx-auto">
-          <div className="flex justify-between items-center ">
-            <h2 className="font-playfair text-5xl font-extrabold">
-              Best <span className="text-orange-light">Sellers</span>
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-extrabold">
+              Unlock the World of{" "}
+              <span className="text-orange-light">Wines</span>
             </h2>
-            <button className="px-8 py-3 rounded-full grediant-color text-white font-rubik cursor-pointer">
+            <button className="mt-4 sm:mt-0 px-6 sm:px-8 py-2 sm:py-3 rounded-full text-orange-light border-2 border-amber-500 font-rubik text-sm sm:text-base">
               Explore More
             </button>
           </div>
-          <div className="flex gap-12 items-center w-full overflow-x-hidden my-14 mt-22">
-            {products.map((item, index) => (
-              <Card key={index} details={item} />
+          <div className="mx-screen mx-auto">
+            <ProductCarousel products={products} Card={WineCard} />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Featured Brands */}
+    <section className="brand py-16">
+      <div className="container mx-auto px-4">
+        <div className="mx-screen mx-auto">
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-8">
+            Featured <span className="text-orange-light">Brands</span>
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-8">
+            {[
+              "crown_royal",
+              "new_belgium",
+              "jim_beam",
+              "captain_morgan",
+              "sorel",
+              "inf",
+              "bulleit",
+              "pacifico",
+              "simply_spiked",
+              "makers_mark",
+            ].map((key) => (
+              <img
+                key={key}
+                src={assets[key]}
+                alt={key}
+                className="mx-auto w-20 sm:w-32 md:w-36"
+              />
             ))}
           </div>
         </div>
-      </section>
-      <section className="wines w-full h-screen bg-card-bg my-18">
-        <div className="container mx-auto">
-          <div className="mx-screen mx-auto">
-            <div className="flex justify-between items-center pt-32">
-              <h2 className="font-playfair text-5xl font-extrabold">
-                Unlock the World of{"  "}
-                <span className="text-orange-light"> Wines</span>
-              </h2>
-              <button className="px-8 py-3 rounded-full  text-orange-light border-2 border-e-amber-500 font-me font-rubik cursor-pointer">
-                Explore More
-              </button>
-            </div>
-            <div className="flex gap-12 items-center w-full overflow-x-hidden my-14 mt-22">
-              {products.map((item, index) => (
-                <WineCard key={index} details={item} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="brand my-18">
-        <div className="container mx-auto">
-          <div className="mx-screen mx-auto pt-14">
-            <h2 className="font-playfair text-5xl font-extrabold text-center">
-              Featured <span className="text-orange-light">Brands</span>
-            </h2>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+);
 
 export default Home;
