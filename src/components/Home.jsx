@@ -41,7 +41,7 @@ const Home = () => (
     </section>
 
     {/* Best Sellers */}
-    <section className="best-explore container mx-auto mt-16 sm:my-32 px-4">
+    <section className="best-explore container mx-auto mt-16 my-24 sm:my-32 px-4">
       <div className="flex flex-col sm:flex-row justify-between items-center mx-screen mx-auto">
         <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-extrabold">
           Best <span className="text-orange-light">Sellers</span>
