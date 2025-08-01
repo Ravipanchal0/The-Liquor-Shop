@@ -14,6 +14,18 @@ const Footer = () => (
       <div className="absolute top-0 inset-x-0 border-none outline-none">
         <img src={Wave} alt="" className="w-full" />
       </div>
+      <div className="banner absolute sm:-top-22 left-0 -top-1 bg-[url('/footer.png')] bg-contain bg-center bg-no-repeat w-full sm:h-78 rounded-lg flex-center text-center flex-col sm:gap-5 mx-auto">
+        <p className="mt-4 text-sm sm:text-lg md:text-2xl font-medium text-bg-primary">
+          Reward yourself with great deals
+        </p>
+        <h1 className="text-xl sm:text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-dark to-orange-light">
+          Get 75%* off
+        </h1>
+
+        <button className="mb-4 px-4 md:px-12 py-1 md:py-3 text-xs sm:text-lg font-medium rounded-full bg-white text-transparent bg-clip-text bg-gradient-to-r from-orange-dark  to-orange-light border-2 border-orange-dark cursor-pointer">
+          Shop Now
+        </button>
+      </div>
       <div className="relative pt-56 sm:pt-80 pb-12 sm:pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.5fr_1fr_1fr_1fr_2fr] gap-8 sm:gap-12 mx-auto max-w-7xl text-center sm:text-start">
           <div className="logo flex flex-col items-center sm:items-start text-center sm:text-left gap-2">
